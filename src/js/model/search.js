@@ -1,17 +1,20 @@
 import axios from "axios";
-export default class search {
+
+export default class Search {
   constructor(query) {
     this.query = query;
   }
+
   async doSearch() {
     try {
-      let res = await axios(
+      let result = await axios(
         "https://forkify-api.herokuapp.com/api/v2/recipes?search=" + this.query
       );
-      this.result = res.data.data.recipes;
+      this.result = result.data.data.recipes;
+
       return this.result;
-    } catch (er) {
-      alert(er);
+    } catch (error) {
+      console.log("Асуудал гарлаа : " + error);
     }
   }
 }
