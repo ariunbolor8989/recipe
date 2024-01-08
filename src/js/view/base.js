@@ -3,6 +3,11 @@ export const elements = {
   searchInput: document.querySelector(".search__field"),
   searchResultList: document.querySelector(".results__list"),
   searchResultDiv: document.querySelector(".results"),
+  pageButtons: document.querySelector(".results__pages"),
+  recipeDiv: document.querySelector(".recipe"),
+  shoppingList: document.querySelector(".shopping__list"),
+  likesmenu: document.querySelector(".likes__field"),
+  likesList: document.querySelector(".likes__list"),
 };
 
 export const renderLoader = (parent) => {
